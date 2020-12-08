@@ -1,0 +1,52 @@
+print("Hi Solder! Welcome to war base.")
+for retry in range(4):
+    welcome = input("Would you like to fight (yes or no): ").lower().strip()
+    if welcome == 'yes':
+        print("welcome solder")
+        for one in range(4):
+            weapon = input("grab AK47 OR M16: ").lower().strip()
+            if weapon == 'ak47':
+                print('Bullets loading')
+                for two in range(4):
+                    turn = input('would you like to take right or left: ').lower().strip()
+                    if turn == 'right':
+                        hit = input('Hit x to kill enemy: ').lower().strip()
+                        if hit == 'x':
+                            print('Great, you won the battel')
+                            exit()
+                        else:
+                            print('Incorrect input, Enemy killed you')
+                            exit()
+                    elif turn == 'left':
+                        print('you lost, Better luck next time')
+                        exit()
+                    else:
+                        print('Enter left or right')
+                break
+            elif weapon == "m16":
+                print('rifle loading')
+                speed = input('would you like to run or walk: ').lower().strip()
+                if speed == 'run':
+                    print("Running 20 miles per hour")
+                    rate = input("would you like to increase your speed : yes/no ")
+                    if rate == 'yes':
+                        print('Overspeed, you felt')
+                        exit()
+                    elif rate == 'no':
+                        print('you gor accident')
+                        exit()
+                elif speed == 'walk':
+                    print("it's too slow, you got killed")
+                    exit()
+                else:
+                    print('Incorrect input, you lost')
+                    exit()
+            else:
+                print("Enter AK47 OR M16")
+        print('you lost')
+        exit()
+    elif welcome == 'no':
+        print("Okay, Now worries \n   Stay in home.")
+        exit()
+    else:
+        print("To start the game and enter yes or no.")
